@@ -82,6 +82,149 @@ button {
 
 }
 
+.telegram {
+    display:grid;
+    position:fixed;
+    bottom:5vh;
+    right:3vw;
+    height: 230px;
+    width: 200px;
+    z-index: 20;
+    border-radius:15px 0 0 0;
+    font-size: 15px;
+    grid-template-rows: 40px auto;
+    grid-template-areas:
+        "h"
+        "b"
+        "btn"
+        ;
+        color: #fff;
+}
+
+.telegram > .tele-hello {
+    position:relative;
+    grid-area: h;
+    padding: 10px 0 0 10px;
+    background-color: #324a63;
+    border-radius: 15px 0 0 0;
+}
+
+.tele-hello > .exit {
+    position: absolute;
+    right:10px;
+    top:0;
+    font-size: 25px;
+    transform: rotate(45deg);
+    height:0%;
+    width: 0%;
+    cursor: pointer;
+    display:block
+}
+
+.tele-body > form > div {
+    padding: 5px;
+    background-color: #fff;
+    position: relative;
+
+}
+
+.tele-body > form > div > label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    pointer-events: none;
+    color: rgb(94, 94, 94);
+    transition: .4s;
+    font-size: 12px;
+
+}
+
+.tele-body > form > div > input,
+.tele-body > form > div > textarea{
+
+    color:#000;
+    border-bottom: 3px solid #324a63;
+    padding-bottom: 0;
+    background-color: #fff;
+
+}
+
+.tele-body > form > div > input:focus~label,
+.tele-body > form > div > input:valid~label,
+.tele-body > form > div > textarea:focus~label,
+.tele-body > form > div > textarea:valid~label{
+    top: 3px;
+    color: #324a63;
+    left: 5px;
+    font-size: 10px;
+}
+
+
+.tele-body > form > div > input:focus,
+.tele-body > form > div > textarea:focus{
+    background-color: none;
+    font-size: 12px;
+}
+
+.btn > button {
+    top:10px;
+    left:0;
+    background-color: #324a63;
+
+    height: 35px;
+    width:100%;
+    border-radius: 0 0 10px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: initial;
+    transition: .4s;
+}
+
+.btn > button:hover{
+    background-color: rgb(26, 69, 134);
+    color:#fff;
+    transition: .4s;
+}
+
+
+.telegram-mini {
+    position:fixed;
+    bottom: 35px;
+    right: 3vw;
+    height: initial;
+    width: initial;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telegram-mini > * {
+    cursor: pointer;
+    color: #324a63;
+    background-color: #000;
+    border-radius: 100%;
+    transition: .4s;
+}
+
+.telegram-mini > *:hover {
+    color: rgb(26, 69, 134);
+    background-color: #fff;
+    transition: .4s;
+}
+
+
+.tele-msg-sent > *{
+    color:#fff;
+    background-color: #324a63;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+
+
 .burger {
     position: fixed;
 
@@ -90,7 +233,7 @@ button {
     cursor: pointer;
     padding: 6px;
     background-color:rgb(53, 51, 51);
-    z-index: 5;
+    z-index: 10;
 
 }
 .burger-dropdown {
@@ -419,7 +562,7 @@ legend > span {
     display: block;
     grid-column: 2/3;
     position: absolute;
-
+    z-index: -5;
 
     right: 30px;
 

@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 
 Route::post('/send', 'SendEmail@send');
+
+
+Route::get('/updated-activity', 'TelegramBotController@updatedActivity');
+Route::post('/telegram', 'TelegramBotController@sendMessage');

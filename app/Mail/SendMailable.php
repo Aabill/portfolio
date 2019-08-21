@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Mail;
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -32,6 +31,7 @@ class SendMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.msg');
+        return $this->from('i@aaronbilldomingo.com')
+                    ->view('mails.msg');
     }
 }

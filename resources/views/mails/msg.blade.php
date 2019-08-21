@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
+    <style>
+    </style>
+
+
 <body>
+
         <p>Name: {{ $data['name'] }}</p>
         <p>From: {{ $data['email']}}</p>
         <p>Subject: {{$data['subject']}}</p>

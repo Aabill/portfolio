@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <!-- Fonts -->
         {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
-    <link rel="stylesheet" href="{{URL::asset('css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/index.css')}}">
     <link rel="stylesheet" href="{{URL::asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <script src="{{URL::asset('js/jquery min-3.3.1.js')}}"></script>
     <title>Aaron Bill Domingo</title>
@@ -26,6 +26,49 @@
                     <a href="#four" id="contact">
                         Contact</a>
             </nav>
+
+            <div class="telegram">
+                <div class="tele-hello">
+                    <p>Hello! <i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
+                    <p class='exit'>+</p>
+                </div>
+                <div class="tele-body">
+                    <form action="/telegram" method="POST">
+                            @csrf
+                        <div>
+
+                            <input type="email" name="tele_email" id="tele_email" required
+                            >
+                            <label for="tele_email">Email</label>
+                        </div>
+                        <div>
+
+                            <textarea name="tele_msg" id="tele_msg" required
+                             style="resize:vertical;
+                            overflow:auto;" rows="4"></textarea>
+                            <label for="tele-msg">Type your message...</label>
+                        </div>
+                        <div class="btn" >
+                            <button type="submit">Send <i class="fa fa-telegram " aria-hidden="true"></i></button>
+
+                        </div>
+                        @if(Session::has('tele-success'))
+                            <script>$(document).ready(function(){
+                                $('.btn').hide();
+                            })</script>
+                            <div class="tele-msg-sent">
+                            <p>{{Session::get('tele-success')}}</p>
+
+                            </div>
+                        @endif
+                    </form>
+                </div>
+            </div>
+
+            <div class="telegram-mini" id='btn-tele-mini'>
+                <i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
+            </div>
+
         <div class="nav">
 
             <div class="burger">
@@ -291,7 +334,14 @@
     </div>
 
     <script src="{{URL::asset('js/index.js')}}"></script>
-
+    <script>
+        $('.telegram-mini').click(function(){
+            $('.telegram').show('slow', 'swing');
+        });
+        $('.exit').click(function(){
+            $('.telegram').hide('slow', 'swing');
+        });
+    </script>
 
 </body>
 </html>
