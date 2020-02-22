@@ -9,10 +9,10 @@
         <!-- Fonts -->
         {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
 
-    <link rel="stylesheet" href="{{URL::asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{URL::secure_asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
-    <link rel="stylesheet"  href="{{URL::asset('css/indes.css')}}">
-    <script src="{{URL::asset('js/jquery min-3.3.1.js')}}"></script>
+    <link rel="stylesheet"  href="{{URL::secure_asset('css/indes.css')}}">
+    <script src="{{URL::secure_asset('js/jquery min-3.3.1.js')}}"></script>
     <title>Aaron Bill Domingo</title>
     </head>
     <body id='foo'>
@@ -335,7 +335,7 @@
 
     </div>
 
-    <script src="{{URL::asset('js/index.js')}}"></script>
+    <script src="{{URL::secure_asset('js/index.js')}}"></script>
     <script>
         $('.telegram-mini').click(function(){
             $('.telegram').show('slow', 'swing');
