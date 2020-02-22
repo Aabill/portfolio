@@ -8,8 +8,10 @@
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <!-- Fonts -->
         {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/index.css')}}">
+
     <link rel="stylesheet" href="{{URL::asset('font-awesome-4.7.0/css/font-awesome.min.css')}}">
+
+    <link rel="stylesheet"  href="{{URL::asset('css/indes.css')}}">
     <script src="{{URL::asset('js/jquery min-3.3.1.js')}}"></script>
     <title>Aaron Bill Domingo</title>
     </head>
@@ -238,10 +240,10 @@
                     <p>Things like...</p>
                     <p>your secrets. &nbsp;<span style="color:rgb(145, 145, 145);">Nice.</span></p>
                     </div>
-                    <div class='envelope'>
-                        <div>
-                            <span style="color: rgb(61, 61, 61);"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></span>
-                        </div>
+                    <div class='tell-me-envelope'>
+                                <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+
+
                     </div>
                 </div>
             <form action="/send" method="POST">

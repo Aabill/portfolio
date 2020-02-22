@@ -203,8 +203,8 @@ button {
 .telegram-mini > * {
     cursor: pointer;
     color: #324a63;
-    background-color: #000;
-    border-radius: 100%;
+    /* background-color: #000; */
+    border-radius: 10px 0 10px 0;
     transition: .4s;
 }
 
@@ -553,20 +553,20 @@ legend > span {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: rgb(61, 61, 61);
+
     position: relative;
-
 }
 
 
-.envelope {
-    display: block;
-    grid-column: 2/3;
+.tell-me > .tell-me-envelope  {
+
     position: absolute;
-    z-index: -5;
-
-    right: 30px;
+    top:0;
+    right:0;
 
 }
+
+
 
 .form > div > label {
     display: block;
